@@ -10,7 +10,7 @@ We provide two selected example models as shown below. You can see them in 3D in
 ## distance
 ![d drawio](https://user-images.githubusercontent.com/83393021/174701615-1591a72e-10c5-4348-8db0-d5610f90e75f.png)
   
-CIE2000 Delta-E, currently one of the most widely used color difference metric, is not perfect. Two color pairs above have same RGB euclidean distance and look same to human eye, but the metric's difference is very huge. In our color space, there isn't much difference in the euclidean distances of two color pairs. 
+CIE2000 Delta-E, currently one of the most widely used color difference metric, is not perfect. Two color pairs above have same RGB euclidean distance and look same to human eye, but the metric's difference is very huge. In our color space, there isn't much difference in the Euclidean distances of two color pairs. 
   
 <br>
 
@@ -67,7 +67,7 @@ The training goal is to make the Euclidean distance of the color pair in the des
 ![overall architecture](https://user-images.githubusercontent.com/83393021/174702077-dc1d0427-297b-49c2-a48f-ca598402d1d1.png)  
 **Overall architecture of a model.** The model is linked in a row with several consecutive blocks.  
   
-Our models both have hidden dimension of 100, 10 blocks and uses Softplus as an activation function. We tried many but Softplus works best. 
+Our models both have hidden dimension of 100, 10 blocks and use Softplus as an activation function. We tried many but Softplus works best. 
   
 <br>
 
