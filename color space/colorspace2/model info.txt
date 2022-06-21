@@ -1,0 +1,5 @@
+hidden dim = 100
+number of blocks = 10
+activation function = softplus
+loss = L1
+epoch = 400

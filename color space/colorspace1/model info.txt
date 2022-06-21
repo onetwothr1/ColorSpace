@@ -1,0 +1,6 @@
+hidden dim = 100
+number of blocks = 10
+activation function = softplus
+loss = MSE
+learning rate decay = 0.999
+epoch = 300
