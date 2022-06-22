@@ -7,14 +7,14 @@ Previously suggested color spaces were hand-crafted. We tried a new approach wit
 
 ![colorspace 3d](https://user-images.githubusercontent.com/83393021/174807890-2840555a-28ec-4d33-83ec-30436699e70f.png)
 <br><br><br>
-## distance
+## Distance
 ![d drawio](https://user-images.githubusercontent.com/83393021/174701615-1591a72e-10c5-4348-8db0-d5610f90e75f.png)
   
 CIE2000 Delta-E, currently one of the most widely used color difference metric, is not perfect. Two color pairs above have same RGB euclidean distance and look same to human eye, but the metric's difference is very huge. In our color space, there isn't much difference in the Euclidean distances of two color pairs. 
   
 <br>
 
-## color gradient
+## Color gradient
 <center><img src="https://user-images.githubusercontent.com/83393021/174808343-9a43edfa-0ac1-4e12-a7bd-cf34bc787079.png" width="800" height="320"/></center>
 <center><img src="https://user-images.githubusercontent.com/83393021/174808259-bdacf258-72c0-4859-b080-7e63ff1a8606.png" width="800" height="320"/></center>
 <center><img src="https://user-images.githubusercontent.com/83393021/174808265-cd011df9-708c-4695-ac8d-5352acba6388.png" width="800" height="320"/></center>
@@ -22,14 +22,14 @@ You can see more gradients in "gradient" folder of each color space.
   
 <br><br>
 
-## cross section
+## Cross section
 
 ![crosssection drawio (1)](https://user-images.githubusercontent.com/83393021/174812073-d3f5b894-7e88-42e2-861a-9332172ec8b4.png) 
   
 <br>
 
-## color palette generation
-With our model, it is easier to generate palettes of evenly distinct colors. We used force vector algorithm from [IWantHue](https://medialab.github.io/iwanthue/) ([code](https://medialab.github.io/iwanthue/js/libs/chroma.palette-gen.js)). You can also see the result in 3D.
+## Color palette generation
+You can generate palettes of evenly distinct colors in perceptually uniform space. We used force vector algorithm from [IWantHue](https://medialab.github.io/iwanthue/) ([code](https://medialab.github.io/iwanthue/js/libs/chroma.palette-gen.js)). You can also see the result in 3D.
 
 ex) Generate a palette of 20 colors.
 
@@ -40,7 +40,7 @@ ex) Generate a palette of 20 colors.
   
 <br>
 
-## data
+## Data
 Data is collected from https://colors-82cc6.web.app/. Data is a array-like container of (answer, color1, color2).
 
 ```
@@ -51,7 +51,7 @@ ex) [[3, (50,120,38), (85,200,5)],
   
 <br>
 
-## training
+## Training
 
 ![probelm setting](https://user-images.githubusercontent.com/83393021/174812328-4716fef3-f298-431d-a41d-55165209125e.png)
   
@@ -59,7 +59,7 @@ The training goal is to make the Euclidean distance of the color pair in the des
   
 <br>
 
-## model architecture
+## Model architecture
 
 ![block architecture](https://user-images.githubusercontent.com/83393021/174702057-bee28b38-cdc6-4202-af31-c52289f1556c.png)  
 **Architecure of one block.** Since MLP often transform the color space (cube shape in initial RGB space) into a line or plane, we need to reduce the dimension back to three and ensure the space keeps its three-dimensional convex form. Thus we use an unit of a block, which has the batchnormalization layer to make the X,Y,Z coordinates spread. Due to the batchnormalization, we have to use the whole batch per one epoch. In addition, to convert a RGB color to our space, you can't just pass the value to the model. You have to calculate for evey possible colors in advance at once, save the result (into csv), and search the mapping from the csv.
@@ -71,7 +71,7 @@ Our models both have hidden dimension of 100, 10 blocks and use Softplus as an a
   
 <br>
 
-## code
+## Code
 * model.py : MLP model definition
 * train.py : Train the MLP model
 * colorspace_to_csv.py : After training, you choose a model, convert its colorspace into csv file. Since MLP does not have an inverse function and the model has batchnromalization layer, it is impossible to convert only one color point from one space to another. We have to calculate the mapped points for entire color range in advance and sava the result to csv file.
@@ -89,7 +89,7 @@ Our models both have hidden dimension of 100, 10 blocks and use Softplus as an a
   
 <br>
 
-## directory tree
+## Directory tree
 
 ```bash
 ├── model    # for model training step
@@ -116,6 +116,13 @@ Our models both have hidden dimension of 100, 10 blocks and use Softplus as an a
 └── ...
 ``` 
   
+<br>
+
+## What's next?
+Our project can be said to be making computers recognize colors like humans eyes. The next step is to make computers understand and feel colors like humans.
+
+We are also eager to make an user-friednly web version of our product.
+
 <br>
 
 ## Acknowledgement
