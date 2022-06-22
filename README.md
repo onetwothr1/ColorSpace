@@ -3,7 +3,7 @@
 **Perceptually uniform color space made by MLP.**  
 **Euclidean distance in this space will be perceptually uniform.**
 
-We provide two selected example models as shown below. You can see them in 3D interactive way by download and open "colorspace1 3D.html" and "colorspace2 3D.html". In the following description, the second model will be mainly described. Since neural network models depend on its random initial parameters and training procedure, one can surely make a better color space.
+Previously suggested color spaces were hand-crafted. We tried a new approach with machine learning. Here, we provide two selected example models we made as shown below. You can see them in 3D interactive way by download and open "colorspace1 3D.html" and "colorspace2 3D.html". In the following description, the second model will be mainly described. Since neural network models depend on its random initial parameters and training procedure, one can surely make a better color space.
 
 ![colorspace 3d](https://user-images.githubusercontent.com/83393021/174807890-2840555a-28ec-4d33-83ec-30436699e70f.png)
 <br><br><br>
@@ -92,14 +92,14 @@ Our models both have hidden dimension of 100, 10 blocks and use Softplus as an a
 ## directory tree
 
 ```bash
-├── model
+├── model    # for model training step
 │   ├── modelname1
 │       ├──parameter/
 │       ├──image/
 │       ├──train history/
 │   ├── modelname2
 │       ...
-├── color space
+├── color space   # for actual use after selecting a model
 │   ├── colorspacename1
 │       ├──cross section/
 │       ├──gradient/
@@ -123,4 +123,4 @@ Our models both have hidden dimension of 100, 10 blocks and use Softplus as an a
 Creative and Interdisciplinary Seminar: Digital Humanities (Professor Javier Cha)
 
 Final project by Team Incógnito.  
-Teammates: Boseol Mun (@healthykim), Tanya Khagay
+Teammates: Boseol Mun (@healthykim), Tanya Khagay, Jinhyeong Kim
