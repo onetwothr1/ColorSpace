@@ -121,7 +121,7 @@ Our models both have hidden dimension of 100, 10 blocks and use Softplus as an a
 ## What's next?
 Our project can be said to be making computers recognize colors like humans eyes. The next step is to make computers understand and feel colors like humans.
 
-We are also eager to make an user-friednly web version of our product.
+We are also eager to make an user-friendly web version of our product.
 
 <br>
 
