@@ -3,7 +3,7 @@
 **Perceptually uniform color space made by MLP.**  
 **Euclidean distance in this space will be perceptually uniform.**
 
-Previously suggested color spaces were hand-crafted. We tried a new approach with machine learning. Here, we provide two selected example models we made as shown below. You can see them in 3D interactive viewer here [Colorspace1](https://onetwothr1.github.io/ColorSpace/color%20space/colorspace1/colorspace1%203D.html), [Colorspace2](https://onetwothr1.github.io/ColorSpace/color%20space/colorspace2/colorspace%203D.html). In the following description, the second model will be mainly described. Since neural network models depend on its random initial parameters and training procedure, one can surely make a better color space.
+Previously suggested color spaces were hand-crafted. We tried a new approach with machine learning. Here, we provide two selected example models we made as shown below. You can see them in 3D interactive viewer here [Colorspace1](https://onetwothr1.github.io/ColorSpace/color%20space/colorspace1/colorspace1%203D.html), [Colorspace2](https://onetwothr1.github.io/ColorSpace/color%20space/colorspace2/colorspace2%203D.html). In the following description, the second model will be mainly described. Since neural network models depend on its random initial parameters and training procedure, one can surely make a better color space.
 
 ![colorspace 3d](https://user-images.githubusercontent.com/83393021/174807890-2840555a-28ec-4d33-83ec-30436699e70f.png)
 <br><br><br>
