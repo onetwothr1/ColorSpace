@@ -6,6 +6,9 @@
 Previously suggested color spaces were hand-crafted. We tried a new approach with machine learning. Here, we provide two selected example models we made as shown below. You can see them in 3D interactive way by download and open "colorspace1 3D.html" and "colorspace2 3D.html" in "color space" folder. In the following description, the second model will be mainly described. Since neural network models depend on its random initial parameters and training procedure, one can surely make a better color space.
 
 ![colorspace 3d](https://user-images.githubusercontent.com/83393021/174807890-2840555a-28ec-4d33-83ec-30436699e70f.png)
+<br>
+[View Colorspace1 3D](./docs/colorspace1%203D.html)
+[View Colorspace2 3D](./docs/colorspace2%203D.html)
 <br><br><br>
 ## Distance
 ![d drawio](https://user-images.githubusercontent.com/83393021/174701615-1591a72e-10c5-4348-8db0-d5610f90e75f.png)
